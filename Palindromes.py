@@ -1,3 +1,5 @@
+import sys
+
 class CelluleP:
     """une cellule d'une liste chaînée"""
     def __init__(self, v, s):
@@ -99,6 +101,17 @@ def main():
         p.empiler(lettre)
         mot = mot[1:]
         print(mot)
+
+    while Pile != None :
+        lettref = f.defile()
+        lettrep = p.depiler()
+        if lettref == lettrep :
+            return True
+        
+        elif lettref != lettrep :
+            return "n'est pas un palindrome"
+            exit_program()
+
 
 
 main()
